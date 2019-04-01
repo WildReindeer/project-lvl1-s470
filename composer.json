@@ -1,36 +1,10 @@
 {
     "name": "wildreindeer/brain-games",
     "bin": ["bin/brain-games"],
-    "type": "library",
     "authors": [
         {
             "name": "WildReideer",
             "email": "axelf1991@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "scripts": {
-      "phpcs": "phpcs",
-      "phpcbf": "phpcbf",
-      "phpunit": "phpunit",
-      "test": "phpunit tests"
-    },
-    "autoload": {
-      "psr-4": {
-        "Php\\Package\\": "src",
-        "Php\\Package\\Tests\\": "tests"
-      }
-    },
-    "require": {
-      "tightenco/collect": "^5.6",
-      "nesbot/carbon": "^1.26",
-      "danielstjules/stringy": "^3.1"
-    },
-    "require-dev": {
-      "symfony/var-dumper": "^4.0",
-      "felixfbecker/language-server": "dev-master",
-      "phpunit/phpunit": "*",
-      "squizlabs/php_codesniffer": "*",
-      "codeclimate/php-test-reporter": "dev-master"
-    }
 }
