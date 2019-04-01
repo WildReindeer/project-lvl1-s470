@@ -1,6 +1,13 @@
 {
     "name": "wildreindeer/brain-games",
     "bin": ["bin/brain-games"],
+    "type": "project",
+    "description": "brain games - the game for your mind",
+    "keywords": [
+        "brain games",
+        "logical games",
+        "intellectual game"
+    ],
     "authors": [
         {
             "name": "WildReideer",
