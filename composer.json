@@ -7,5 +7,6 @@
             "email": "axelf1991@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }
