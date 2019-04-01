@@ -8,12 +8,5 @@
         }
     ],
     "minimum-stability": "dev",
-    "repositories": [
-        {
-          "type": "vcs",
-          "url": "https://github.com/WildReindeer/project-lvl1-s470.git"
-        }
-      ],
-    
     "require": {}
 }
