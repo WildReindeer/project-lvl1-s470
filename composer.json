@@ -11,7 +11,7 @@
     "repositories": [
         {
           "type": "vcs",
-          "url": "https://github.com/WildReindeer/project-lvl1-s470"
+          "url": "https://github.com/WildReindeer/project-lvl1-s470.git"
         }
       ],
     
