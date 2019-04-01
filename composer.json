@@ -7,6 +7,12 @@
             "email": "axelf1991@gmail.com"
         }
     ],
+    "repositories": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/WildReindeer/project-lvl1-s470"
+        }
+      ]
     "minimum-stability": "dev",
     "require": {}
 }
