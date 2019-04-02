@@ -4,9 +4,10 @@
     "type": "project",
     "description": "brain games - the game for your mind",
     "keywords": [
-        "brain games",
-        "logical games",
-        "intellectual game"
+        "brain",
+        "logical",
+        "intellectual",
+        "game"
     ],
     "authors": [
         {
@@ -21,6 +22,5 @@
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
-    }
-    
+    }    
 }
