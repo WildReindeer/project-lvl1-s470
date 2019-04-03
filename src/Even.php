@@ -23,7 +23,7 @@ function genQuestion(string $name)
     if (isCorrectAnswer($answer) && $correctAnswer === $answer) {
         line('Correct!');
     } else {
-        line("{$incorrectAnswer} is wrong answer ;(. Correct answer was {$correctAnswer}\n");
+        line("'{$incorrectAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'\n");
         exit("Let's try again,{$name}\n");
     }
 }
@@ -39,4 +39,5 @@ function startGame()
         genQuestion($name);
         $numOfQuestion -= 1;
     }
+    line("Congratulations,{$name}!");
 }
