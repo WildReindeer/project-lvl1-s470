@@ -1,6 +1,9 @@
 {
     "name": "wildreindeer/brain-games",
-    "bin": ["bin/brain-games"],
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even"
+    ],
     "type": "project",
     "description": "brain games - the game for your mind",
     "keywords": [
@@ -17,7 +20,8 @@
     ],
     "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/Even.php"
         ]
     },
     "require": {
