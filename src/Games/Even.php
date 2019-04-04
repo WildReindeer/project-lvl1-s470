@@ -9,24 +9,14 @@ function isEven(int $num)
     return $num % 2 === 0;
 }
 
-function correctAnswer($question)
-{
-    return isEven($question) ? 'yes' : 'no';
-}
-
-function genQuestion()
-{
-    return rand(1, 100);
-}
-
 function startGame()
 {
-    $game = line("Answer 'yes' if number even otherwise answer 'no'");
-    $question = [];
-    $answer = [];
-    for ($i = 0; $i < 3; $i++) {
-        $question[] = genQuestion();
-        $answer[] = correctAnswer($question[$i]);
+    $game = "Answer 'yes' if number even otherwise answer 'no'";
+    $questionsCount = 3;
+    $questionsAndAnswers = [];
+    for ($i = 0; $i < $questionsCount; $i++) {
+        $question = rand(1, 100);
+        $questionsAndAnswers[$question] = isEven($question) ? 'yes' : 'no';
     }
-    run($game, $question, $answer);
+    run($game, $questionsAndAnswers);
 }
