@@ -2,7 +2,6 @@
 namespace BrainGames\Games\Calc;
 
 use function \BrainGames\Cli\run;
-use function \cli\line;
 
 function calculateAnswer($operand1, $operand2, $operator)
 {
@@ -13,7 +12,7 @@ function calculateAnswer($operand1, $operand2, $operator)
     } else {
         $answer = $operand1 * $operand2;
     }
-    return (string) $answer;
+    return $answer;
 }
 
 function startGame()
@@ -28,7 +27,7 @@ function startGame()
         $selectOperator = rand(0, sizeof($operators) - 1);
         $operator = $operators[$selectOperator];
         $question = "{$operand1} {$operator} {$operand2}";
-        $questionsAndAnswers[$question] = calculateAnswer($operand1, $operand2, $operator);
+        $questionsAndAnswers[$question] = (string) calculateAnswer($operand1, $operand2, $operator);
     }
     run($game, $questionsAndAnswers);
 }

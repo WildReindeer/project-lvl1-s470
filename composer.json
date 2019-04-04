@@ -3,7 +3,8 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ],
     "type": "project",
     "description": "brain games - the game for your mind",
@@ -23,7 +24,8 @@
         "files": [
             "src/Cli.php",
             "src/Games/Even.php",
-            "src/Games/Calc.php"
+            "src/Games/Calc.php",
+            "src/Games/Gcd.php"
         ]
     },
     "require": {
