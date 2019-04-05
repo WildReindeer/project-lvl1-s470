@@ -1,31 +1,34 @@
 <?php
 namespace BrainGames\Games\Progression;
 
-use function BrainGames\Cli\run;
+use function BrainGames\run;
 
-function createProgression($size)
+const QUESTIONS_COUNT = 3;
+const DESCRIPTION_GAME = 'What number is missing in the progression?';
+const PROGRESSION_SIZE = 10;
+
+function createProgression()
 {
     $beginProgression = rand(0, 100);
     $stepProgression = rand(1, 5);
-    $progression = [$beginProgression];
-    for ($i = 0; $i < $size; $i++) {
-        $progression[] = $progression[$i] + $stepProgression;
+    $progression = [];
+    for ($i = 1; $i <= PROGRESSION_SIZE; $i++) {
+        $progression[] = $beginProgression + $stepProgression * $i;
     }
     return $progression;
 }
 
 function startGame()
 {
-    $game = 'What number is missing in the progression?';
-    $progressionSize = 10;
-    $questionsCount = 3;
     $questionsAndAnswers = [];
-    for ($i = 0; $i < $questionsCount; $i++) {
-        $positionHiddenElement = rand(0, $progressionSize - 1);
-        $question = createProgression($progressionSize);
-        $hidenElement = $question[$positionHiddenElement];
-        $question[$positionHiddenElement] = '..';
-        $questionsAndAnswers[implode(' ', $question)] = (string) $hidenElement;
+    for ($i = 0; $i < QUESTIONS_COUNT; $i++) {
+        $progression = createProgression();
+        $positionHiddenElement = array_rand($progression);
+        $hidenElement = $progression[$positionHiddenElement];
+        $progression[$positionHiddenElement] = '..';
+        $question = implode(' ', $progression);
+        $answer = (string) $hidenElement;
+        $questionsAndAnswers[$question] = $answer;
     }
-    run($game, $questionsAndAnswers);
+    run(DESCRIPTION_GAME, $questionsAndAnswers);
 }

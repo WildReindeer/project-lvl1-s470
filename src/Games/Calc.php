@@ -1,33 +1,34 @@
 <?php
 namespace BrainGames\Games\Calc;
 
-use function \BrainGames\Cli\run;
+use function \BrainGames\run;
+
+const QUESTIONS_COUNT = 3;
+const DESCRIPTION_GAME = 'What is the result of the expression?';
+const OPERATORS = ['+', '-', '*'];
 
 function calculateAnswer($operand1, $operand2, $operator)
 {
     if ($operator === '+') {
-        $answer = $operand1 + $operand2;
+        return $operand1 + $operand2;
     } elseif ($operator === '-') {
-        $answer = $operand1 - $operand2;
+        return $operand1 - $operand2;
     } else {
-        $answer = $operand1 * $operand2;
+        return $operand1 * $operand2;
     }
-    return $answer;
 }
 
 function startGame()
 {
-    $game = 'What is the result of the expression?';
-    $operators = ['+', '-', '*'];
-    $questionsCount = 3;
     $questionsAndAnswers = [];
-    for ($i = 0; $i < $questionsCount; $i++) {
+    for ($i = 0; $i < QUESTIONS_COUNT; $i++) {
         $operand1 = rand(1, 10);
         $operand2 = rand(1, 10);
-        $selectOperator = rand(0, sizeof($operators) - 1);
-        $operator = $operators[$selectOperator];
+        $selectOperator = array_rand(OPERATORS);
+        $operator = OPERATORS[$selectOperator];
         $question = "{$operand1} {$operator} {$operand2}";
-        $questionsAndAnswers[$question] = (string) calculateAnswer($operand1, $operand2, $operator);
+        $answer = (string) calculateAnswer($operand1, $operand2, $operator);
+        $questionsAndAnswers[$question] = $answer;
     }
-    run($game, $questionsAndAnswers);
+    run(DESCRIPTION_GAME, $questionsAndAnswers);
 }

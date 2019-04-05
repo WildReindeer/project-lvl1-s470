@@ -1,13 +1,13 @@
 <?php
-namespace BrainGames\Cli;
+namespace BrainGames;
 
 use function \cli\line;
 use function \cli\prompt;
 
-function run($game, $questionsAndAnswers)
+function run($descriptionGame, $questionsAndAnswers)
 {
     line('Welcome to the Brain Game!');
-    line("{$game}\n");
+    line("{$descriptionGame}\n");
     $name = prompt('May i have your name?');
     line("Hello, %s!", $name);
    

@@ -1,7 +1,10 @@
 <?php
 namespace BrainGames\Games\Even;
 
-use function \BrainGames\Cli\run;
+use function \BrainGames\run;
+
+const QUESTIONS_COUNT = 3;
+const DESCRIPTION_GAME = "Answer 'yes' if number even otherwise answer 'no'";
 
 function isEven(int $num)
 {
@@ -10,12 +13,11 @@ function isEven(int $num)
 
 function startGame()
 {
-    $game = "Answer 'yes' if number even otherwise answer 'no'";
-    $questionsCount = 3;
     $questionsAndAnswers = [];
-    for ($i = 0; $i < $questionsCount; $i++) {
+    for ($i = 0; $i < QUESTIONS_COUNT; $i++) {
         $question = rand(1, 100);
-        $questionsAndAnswers[$question] = isEven($question) ? 'yes' : 'no';
+        $answer = isEven($question) ? 'yes' : 'no';
+        $questionsAndAnswers[$question] = $answer;
     }
-    run($game, $questionsAndAnswers);
+    run(DESCRIPTION_GAME, $questionsAndAnswers);
 }
