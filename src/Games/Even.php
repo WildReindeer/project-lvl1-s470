@@ -1,9 +1,9 @@
 <?php
 namespace BrainGames\Games\Even;
 
-use function \BrainGames\run;
+use function \Play\run;
+use const \Play\QUESTIONS_COUNT;
 
-const QUESTIONS_COUNT = 3;
 const DESCRIPTION_GAME = "Answer 'yes' if number even otherwise answer 'no'";
 
 function isEven(int $num)

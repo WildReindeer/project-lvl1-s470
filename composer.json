@@ -23,7 +23,7 @@
     ],
     "autoload": {
         "files": [
-            "src/BrainGames.php",
+            "src/Play.php",
             "src/Games/Even.php",
             "src/Games/Calc.php",
             "src/Games/Gcd.php",

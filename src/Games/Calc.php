@@ -1,9 +1,9 @@
 <?php
 namespace BrainGames\Games\Calc;
 
-use function \BrainGames\run;
+use function \Play\run;
+use const \Play\QUESTIONS_COUNT;
 
-const QUESTIONS_COUNT = 3;
 const DESCRIPTION_GAME = 'What is the result of the expression?';
 const OPERATORS = ['+', '-', '*'];
 

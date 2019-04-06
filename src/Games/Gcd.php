@@ -1,9 +1,9 @@
 <?php
 namespace BrainGames\Games\Gcd;
 
-use function \BrainGames\run;
+use function \Play\run;
+use const \Play\QUESTIONS_COUNT;
 
-const QUESTIONS_COUNT = 3;
 const DESCRIPTION_GAME = 'Find the greatest common divisor of given numbers.';
 
 function calculateGreatestCommonDivisor($num1, $num2)
