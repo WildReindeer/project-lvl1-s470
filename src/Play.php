@@ -1,8 +1,10 @@
 <?php
-namespace BrainGames;
+namespace Play;
 
 use function \cli\line;
 use function \cli\prompt;
+
+const QUESTIONS_COUNT = 3;
 
 function run($descriptionGame, $questionsAndAnswers)
 {
