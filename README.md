@@ -20,6 +20,7 @@
     Congratulations,Zeus!
 
 ### Для установки наберите в консоли `composer global create-project wildreindeer/brain-games`
+### Для запуска игры наберите соответствующую команду в консоль.
 ### Список игр c командами для их запуска:
 1. Проверка на четность.(`brain-even`)
 2. Калькулятор.(`brain-calc`)
