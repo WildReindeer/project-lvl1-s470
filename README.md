@@ -1,7 +1,8 @@
 # BrainGames
 ## BrainGames - это набор мини-игр, запускаемых из консоли.
 ### Пример игрового процесса:
-    `$ brain-calc`
+    $ brain-calc
+    
     Welcome to the Brain Game!
     What is the result of the expression?
 
