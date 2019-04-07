@@ -1,14 +1,17 @@
 <?php
 namespace BrainGames\Games\Prime;
 
-use function \Play\run;
-use const \Play\QUESTIONS_COUNT;
+use function BrainGames\Play\run;
+use const BrainGames\Play\QUESTIONS_COUNT;
 
 const DESCRIPTION_GAME = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
 function isPrime(int $num)
 {
-    for ($i = 2; $i < floor($num); $i++) {
+    if ($num < 2) {
+        return false;
+    }
+    for ($i = 2; $i < floor($num / 2); $i++) {
         if ($num % $i === 0) {
             return false;
         }

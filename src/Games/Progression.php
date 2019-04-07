@@ -1,8 +1,8 @@
 <?php
 namespace BrainGames\Games\Progression;
 
-use function \Play\run;
-use const \Play\QUESTIONS_COUNT;
+use function BrainGames\Play\run;
+use const BrainGames\Play\QUESTIONS_COUNT;
 
 const DESCRIPTION_GAME = 'What number is missing in the progression?';
 const SIZE = 10;
@@ -12,7 +12,7 @@ function createProgression()
     $start = rand(0, 100);
     $step = rand(1, 5);
     $progression = [];
-    for ($i = 1; $i <= SIZE; $i++) {
+    for ($i = 0; $i < SIZE; $i++) {
         $progression[] = $start + $step * $i;
     }
     return $progression;

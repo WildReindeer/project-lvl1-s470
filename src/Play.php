@@ -1,5 +1,5 @@
 <?php
-namespace Play;
+namespace BrainGames\Play;
 
 use function \cli\line;
 use function \cli\prompt;
