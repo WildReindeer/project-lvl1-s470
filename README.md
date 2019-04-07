@@ -2,7 +2,7 @@
 ## BrainGames - это набор мини-игр, запускаемых из консоли.
 ### Пример игрового процесса:
     $ brain-calc
-    
+
     Welcome to the Brain Game!
     What is the result of the expression?
 
@@ -19,7 +19,7 @@
     Correct!
     Congratulations,Zeus!
 
-### Для установки наберите в консоле `composer global create-project wildreindeer/brain-games`
+### Для установки наберите в консоли `composer global create-project wildreindeer/brain-games`
 ### Список игр c командами для их запуска:
 1. Проверка на четность.(`brain-even`)
 2. Калькулятор.(`brain-calc`)
